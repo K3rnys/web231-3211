@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'Montserrat';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+section, header {
+    margin: 0 70px 0;
+}
+
+section {
+    padding-top: 40px;
+}
+
+h1 {
+  font-size: 55px;
+  font-weight: 700;
+  padding: 40px 0 40px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px   
+}
+
+h3 {
+    font-size: 34px;
+    font-weight: 570;
+    margin-bottom: 20px   
+  }
+
+h4 {
+    font-size: 30px;
+    font-weight: 550;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: tomato;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px; 
+}
+
+nav .item {
+    margin-right: 20px;
+    text-decoration: none; 
+}
+
+.active {
+  color: tomato;
+}
+  
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.categoryButtons {
+    margin-bottom: 20px;
+}
+
+.categoryButtons button{
+    padding: 10px 20px;
+    font-size: 24px;
+    color: green;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+  
+
+.dish {
+    border: 2px solid transparent;
+    border-radius: 35px;
+    overflow: hidden;
+    text-align: center;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    background: white;
+    padding: 30px 40px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+.dish img {
+    width: 100%;
+    border-radius: 35px;
+    height: auto; 
+    margin-bottom: 20px;    
+}
+
+.price {
+    font-weight: 700;
+}
+
+.name, .price {
+    margin: 2px 0;
+    font-size: 20px;
+}
+
+.weight {
+    margin: 10px 0;
+    font-size: 18px;
+    color: gray;
+}
+  
+.dish button {
+    background-color: #f1eee9;
+    padding-top: 10px;
+    padding: 10px 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.dish:hover {
+    border: 2px solid tomato;
+}
+  
+.dish:hover button {
+    background-color: tomato;
+    color: white;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; 
+    padding-top: 0px;
+    padding-bottom: 100px;
+    font-family: Arial, sans-serif;
+}
+
+.orderTitle {
+    margin-bottom: 40px;
+}
+
+.orderBox {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.orderInfo, .clientInfo {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    min-height: 200px;
+}
+
+label {
+    font-size: 24px;
+    font-weight: 550;
+    margin-bottom: 18px;
+}
+
+em {
+    font-size: 18px;
+}
+
+.orderCategory {
+    display: none; 
+}
+
+.selectedSoup,
+.selectedMaindish,
+.selectedSalad,
+.selectedDrink,
+.selectedDessert {
+    font-size: 22px; 
+    margin: 4px 0 20px;
+}
+
+
+label input[type="checkbox"], label input[type="radio"] {
+    width: auto; 
+    margin-right: 10px; 
+}
+
+select, textarea {
+    height: 40px;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+option {
+    font-size: 20px;
+}
+
+#comments {
+    height: 150px; 
+}
+
+
+.buttonForm {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonForm1, .buttonForm2 {
+    padding: 10px 20px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.menuBlock {
+    background-color: #fff;
+    padding: 20px;
+    width: 90%;
+    text-align: center;
+    margin: 20px auto;
+}
+  
+
+.menuTitle {
+    margin-bottom: 40px;
+    text-align: center;
+}
+  
+  
+.menuGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+  
+
+.comboBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px; 
+    padding: 15px;
+}
+  
+  
+.dishBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+ 
+.menuImage {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+}
+
+.menuImage:hover {
+    transform: translateY(-5px) scale(1.1); 
+}
+
+.menuCaption {
+    font-size: 16px;
+}
+  
+  
+.menuNote {
+    font-size: 14px;
+}
+
+.alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.alertContent {
+    display: flex;  
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 35%;
+    height: 35%;
+}
+
+.alertContent p {
+    text-align: center;
+    font-size: 22px;
+}
+
+.closeAlert {
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: white;
+    border: solid, black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+}
+
+.alertContent:hover .closeAlert:hover {
+    background-color: #f1f1f1;
+    color: #282828;
+}
+
+
+footer {
+    margin-top: auto; 
+    padding: 40px 0 40px 70px;
+    background-color: black;
+}
+
+footer p, footer a {
+    color: white;
+}
+
+
+@media (max-width: 800px) {
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    h1 {
+        font-size: 35px;
+    }
+    
+    h2 {
+        font-size: 30px;
+    }
+    
+    nav .item {
+        font-size: 20px;
+    }
+    
+    .dish p {
+        font-size: 16px;
+    }
+    
+    footer p , footer a{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .dish {
+        padding: 20px; 
+    }
+
+    .dish img { 
+        margin-bottom: 15px;
+    }
+
+    .name, .price, .weight {
+        font-size: 18px; 
+    }
+
+    .dish button {
+        padding: 10px 20px; 
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+    
+    h2 {
+        font-size: 25px;
+    }
+    
+    nav .item {
+        font-size: 18px;
+    }
+    
+    .dish p {
+        font-size: 14px;
+    }
+    
+    footer p, footer a {
+        font-size: 12px;
+    }
+}
+
