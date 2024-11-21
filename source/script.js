@@ -1,17 +1,20 @@
 let products = [];
 
-const loadDishes = async () => {
-    try {
-        const response = await fetch("http://lab7-api.std-900.ist.mospolytech.ru/api/dishes");
-        const data = await response.json();
-        products = data;
-        renderDishes();  
-    } catch (error) {
-        console.error("Ошибка при загрузке блюд:", error);
-    }
-};
+
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    const loadDishes = async () => {
+        try {
+            const response = await fetch("http://lab7-api.std-900.ist.mospolytech.ru/api/dishes");
+            const data = await response.json();
+            products = data;
+            renderDishes();  
+        } catch (error) {
+            console.error("Ошибка при загрузке блюд:", error);
+        }
+    };
+    
     const sections = {
         soup: document.querySelector('.soups .gridContainer'),
         maindish: document.querySelector('.maindishes .gridContainer'),
@@ -298,6 +301,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    renderDishes();
+
     loadDishes();
 });
