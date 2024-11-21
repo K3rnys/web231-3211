@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const loadDishes = async () => {
         try {
-            const response = await fetch("http://lab7-api.std-900.ist.mospolytech.ru/api/dishes");
+            const response = await fetch("https://edu.std-900.ist.mospolytech.ru/labs/api/dishes");
             const data = await response.json();
             products = data;
             renderDishes();  
