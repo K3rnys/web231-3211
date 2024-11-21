@@ -267,6 +267,6 @@ export const products = [
       category: 'dessert',
       weight: '700 г',
       image: 'source/img/donuts6.jpg',
-      kind: 'big'
+      kind: 'large'
     },
   ];

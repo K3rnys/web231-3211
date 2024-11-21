@@ -1,4 +1,15 @@
-import { products } from './dishes.js'; 
+let products = [];
+
+const loadDishes = async () => {
+    try {
+        const response = await fetch("https://edu.std-900.ist.mospolytech.ru/labs/api/dishes");
+        const data = await response.json();
+        products = data;
+        renderDishes();  
+    } catch (error) {
+        console.error("Ошибка при загрузке блюд:", error);
+    }
+};
 
 document.addEventListener('DOMContentLoaded', () => {
     const sections = {
@@ -44,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function renderDishes() {
         const soups = products.filter(product => product.category === 'soup');
-        const maindishes = products.filter(product => product.category === 'maindish');
+        const maindishes = products.filter(product => product.category === 'main-course');
         const salads = products.filter(product => product.category === 'salad');
         const drinks = products.filter(product => product.category === 'drink');
         const desserts = products.filter(product => product.category === 'dessert');
@@ -288,4 +299,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     renderDishes();
+    loadDishes();
 });
